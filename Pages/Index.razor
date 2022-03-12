@@ -1,0 +1,14 @@
+﻿@page "/"
+@using YoutubeDatabindDemo.Model
+
+<h1>
+    @Person.Name
+</h1>
+<br />
+<b>On Change: </b><input type="text" @bind="@Person.Name" />
+<b>On Input: </b><input type="text" @bind-value="@Person.Name" @bind-value:event="oninput" />
+
+@code {
+    private Person Person = new Person() { Id = 1, Name = "Erismar Oliveira" };
+}
+
